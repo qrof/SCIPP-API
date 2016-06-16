@@ -1,0 +1,1002 @@
+FORMAT: 1A
+HOST: http://scipp.apiblueprint.org/
+
+# SCIPP API
+
+SCIPP API is a simple API allowing consumers to view projects, events, materials and trainer profiles .
+
+Language preferences:
+Languages can be set by:
+* Accept-Language Header 
+* query string /projects?L=en
+
+# Group Projects
+
+## Projects Collection [/projects]
+
+### List All Projects [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            ETag: "Version2"
+            Accept-Language: "ISO3166 alpha-2 codes - de, fr, en"
+
+    + Body
+
+            
+            {
+                "type": "FeatureCollection",
+                "features": [
+                  {
+                    "id": "b372b35f-d5b3-005e-42c0-3c9e32c490c0",
+                    "type": "Feature",
+                    "properties": {
+                      "name": "Freiraum alter Leipziger Bahnhof",
+                      "color": "#81C750",
+                      "uri": "/projects/de/freiraum-alter-leipziger-bahnhof",
+                      "evolution": 8,
+                      "cat_codes": [
+                        512,
+                        536870916,
+                        0,
+                        262176,
+                        134217728,
+                        34340864,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                      ],
+                      "interactions": [
+                        1
+                      ],
+                      "address": {
+                        "city": "Dresden",
+                        "postcode": "01097",
+                        "countryCode": "DE"
+                      },
+                      "thumbnail": "http://flow/_Resources/Persistent/32ed46c5cced96c0ee11a2b000c30a5e131a2f64/-K0I4849.jpg"
+                    },
+                    "geometry": {
+                      "type": "GeometryCollection",
+                      "geometries": [
+                        {
+                          "type": "Point",
+                          "crs": {
+                            "type": "name",
+                            "properties": {
+                              "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+                            }
+                          },
+                          "coordinates": [
+                            13.738038539886473,
+                            51.06603667619565
+                          ]
+                        },
+                        {
+                          "type": "Polygon",
+                          "coordinates": [
+                            [
+                              [
+                                13.736321926116943,
+                                51.064135319559504
+                              ],
+                              [
+                                13.736836910247803,
+                                51.06412183448174
+                              ],
+                              [
+                                13.737545013427733,
+                                51.064809568438314
+                              ],
+                              [
+                                13.737695217132568,
+                                51.06501858359662
+                              ],
+                              [
+                                13.737609386444092,
+                                51.06553100386261
+                              ],
+                              [
+                                13.738059997558594,
+                                51.06554448852983
+                              ],
+                              [
+                                13.738038539886473,
+                                51.06533547574618
+                              ],
+                              [
+                                13.738253116607666,
+                                51.06550403451633
+                              ],
+                              [
+                                13.738467693328857,
+                                51.0659018307803
+                              ],
+                              [
+                                13.738585710525513,
+                                51.06638053022672
+                              ],
+                              [
+                                13.738510608673096,
+                                51.066838998294685
+                              ],
+                              [
+                                13.738328218460081,
+                                51.06727723558529
+                              ],
+                              [
+                                13.737834692001341,
+                                51.06780311485705
+                              ],
+                              [
+                                13.737319707870483,
+                                51.06831550429792
+                              ],
+                              [
+                                13.73684763908386,
+                                51.06874698574324
+                              ],
+                              [
+                                13.736021518707275,
+                                51.06851776172625
+                              ],
+                              [
+                                13.735817670822142,
+                                51.067890760821456
+                              ],
+                              [
+                                13.73539924621582,
+                                51.06735814047753
+                              ],
+                              [
+                                13.735549449920654,
+                                51.06712890958222
+                              ],
+                              [
+                                13.734980821609497,
+                                51.06643446788216
+                              ],
+                              [
+                                13.734304904937744,
+                                51.06584789250417
+                              ],
+                              [
+                                13.734433650970459,
+                                51.065760242671416
+                              ],
+                              [
+                                13.7349271774292,
+                                51.06602993393419
+                              ],
+                              [
+                                13.73514175415039,
+                                51.065834407925315
+                              ],
+                              [
+                                13.735485076904297,
+                                51.065099492436794
+                              ],
+                              [
+                                13.735324144363402,
+                                51.064991613951804
+                              ],
+                              [
+                                13.736182451248169,
+                                51.06431736772461
+                              ],
+                              [
+                                13.736321926116943,
+                                51.064135319559504
+                              ]
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {}
+                ]
+              }
+            
++ Response 200 (application/xml)
+
+    + Headers
+
+            ETag: "Version2"
+
+    + Body
+
+            <xml>
+                <result xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <project xlink:type="simple" xlink:href="" >
+                        <id>fe8b34b7-0a8f-eab7-5df9-1522da24f358</id>
+                        <name>Test Project</name>
+                        <country-iso>de</country-iso>
+                        <lat>51.07184</lat>
+                        <lng>13.7424474</lng>
+                        <catcodes>
+                            <catcode>256</catcode>
+                            <catcode>0</catcode>
+                            <catcode>0</catcode>
+                            <catcode>0</catcode>
+                            <catcode>0</catcode>
+                            <catcode>0</catcode>
+                        </catcodes>
+                        <evolution>
+                            <id>6</id>
+                            <name>Eine gute Idee</name>
+                        </evolution>
+                    </project>
+                </result>
+            </xml>
+
+## Project [/projects/{lang_code}/{project_shortname}]
+
++ Parameters
+    + lang_code - ISO code
+    + project_shortname (friendly url/title) - ID of the Project in the form of an integer
+
+### View a Projects Detail [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            ETag: "Version2"
+
+    + Body
+    
+            {
+              "id": "b372b35f-d5b3-005e-42c0-3c9e32c490c0",
+              "type": "Feature",
+              "properties": {
+                "name": "Freiraum alter Leipziger Bahnhof",
+                "color": "#81C750",
+                "uri": "/projects/de/freiraum-alter-leipziger-bahnhof",
+                "evolution": {
+                  "id": 8,
+                  "name": "Aktiv",
+                  "comment": ""
+                },
+                "cat_codes": [
+                  512,
+                  536870916,
+                  0,
+                  262176,
+                  134217728,
+                  34340864,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "interactions": [
+                  {
+                    "id": 1,
+                    "name": "Aktiv werden",
+                    "comment": ""
+                  }
+                ],
+                "address": {
+                  "street": "Eisenbahnstraße 1",
+                  "quarter": "Innere Neustadt",
+                  "district": "Neustadt",
+                  "city": "Dresden",
+                  "postcode": "01097",
+                  "countrycode": "de",
+                  "country": "Deutschland",
+                  "timezone": ""
+                },
+                "thumbnail": "http://flow/_Resources/Persistent/32ed46c5cced96c0ee11a2b000c30a5e131a2f64/-K0I4849.jpg",
+                "membershipsTo": [
+                  {
+                    "uri": "/networks/de/gartennetzwerk-dresden",
+                    "name": "Gartennetzwerk"
+                  }
+                ],
+                "abstract": "Neue Chance für einen  elbnahen Freiraum in Dresden Neustadt",
+                "description": "<p/>",
+                "images": [
+                  {
+                    "uri": "http://flow/_Resources/Persistent/1b0d2d7854bb6b97e27368f2e8a8b1a087a9bda6/-K0I4849.jpg",
+                    "title": ""
+                  }
+                ],
+                "contactRoles": [
+                  {
+                    "role": "Presse",
+                    "contact": {
+                      "firm": null,
+                      "organisation": null,
+                      "firstname": "Ralf",
+                      "surename": "",
+                      "function": null,
+                      "fon": "",
+                      "fax": null,
+                      "mobile": "",
+                      "email": "ralf@",
+                      "website": null,
+                      "availability": null,
+                      "address": {
+                        "street": "Conradstraße",
+                        "quarter": "Leipziger Vorstadt",
+                        "district": "Neustadt",
+                        "city": "Dresden",
+                        "postcode": "01097",
+                        "countrycode": "de",
+                        "country": "Deutschland",
+                        "timezone": ""
+                      }
+                    }
+                  }
+                ],
+                "events": [
+                  {
+                    "uri": "/events/de/event-with-multi-lang",
+                    "name": "EVENt with MULTI LANG",
+                    "start": "2016-05-30T00:00:00+02:00",
+                    "stop": "2016-07-06T00:00:00+02:00"
+                  }
+                ]
+              },
+              "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                  {
+                    "type": "Point",
+                    "crs": {
+                      "type": "name",
+                      "properties": {
+                        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+                      }
+                    },
+                    "coordinates": [
+                      13.738038539886473,
+                      51.06603667619565
+                    ]
+                  },
+                  {
+                    "type": "Polygon",
+                    "coordinates": [
+                      [
+                        [
+                          13.736321926116943,
+                          51.064135319559504
+                        ],
+                        [
+                          13.736836910247803,
+                          51.06412183448174
+                        ],
+                        [
+                          13.737545013427733,
+                          51.064809568438314
+                        ],
+                        [
+                          13.737695217132568,
+                          51.06501858359662
+                        ],
+                        [
+                          13.737609386444092,
+                          51.06553100386261
+                        ],
+                        [
+                          13.738059997558594,
+                          51.06554448852983
+                        ],
+                        [
+                          13.738038539886473,
+                          51.06533547574618
+                        ],
+                        [
+                          13.738253116607666,
+                          51.06550403451633
+                        ],
+                        [
+                          13.738467693328857,
+                          51.0659018307803
+                        ],
+                        [
+                          13.738585710525513,
+                          51.06638053022672
+                        ],
+                        [
+                          13.738510608673096,
+                          51.066838998294685
+                        ],
+                        [
+                          13.738328218460081,
+                          51.06727723558529
+                        ],
+                        [
+                          13.737834692001341,
+                          51.06780311485705
+                        ],
+                        [
+                          13.737319707870483,
+                          51.06831550429792
+                        ],
+                        [
+                          13.73684763908386,
+                          51.06874698574324
+                        ],
+                        [
+                          13.736021518707275,
+                          51.06851776172625
+                        ],
+                        [
+                          13.735817670822142,
+                          51.067890760821456
+                        ],
+                        [
+                          13.73539924621582,
+                          51.06735814047753
+                        ],
+                        [
+                          13.735549449920654,
+                          51.06712890958222
+                        ],
+                        [
+                          13.734980821609497,
+                          51.06643446788216
+                        ],
+                        [
+                          13.734304904937744,
+                          51.06584789250417
+                        ],
+                        [
+                          13.734433650970459,
+                          51.065760242671416
+                        ],
+                        [
+                          13.7349271774292,
+                          51.06602993393419
+                        ],
+                        [
+                          13.73514175415039,
+                          51.065834407925315
+                        ],
+                        [
+                          13.735485076904297,
+                          51.065099492436794
+                        ],
+                        [
+                          13.735324144363402,
+                          51.064991613951804
+                        ],
+                        [
+                          13.736182451248169,
+                          51.06431736772461
+                        ],
+                        [
+                          13.736321926116943,
+                          51.064135319559504
+                        ]
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+
+# Group Events
+
+## Events Collection [/events]
+
+### List All Events [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            ETag: "Version2"
+            
+    + Body
+    
+            {
+              "type": "FeatureCollection",
+              "features": [
+                {
+                  "id": "49f982fc-0098-91ae-e093-703eee8e3c94",
+                  "type": "Feature",
+                  "properties": {
+                    "name": "EVENt with MULTI LANG",
+                    "color": "#00C7D6",
+                    "uri": "/events/de/event-with-multi-lang",
+                    "cat_codes": [
+                      2048,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "interactions": [
+                      1
+                    ],
+                    "subjects": [],
+                    "address": {
+                      "city": "Dresden",
+                      "postcode": "01097",
+                      "countryCode": "DE"
+                    },
+                    "thumbnail": "",
+                    "start": "2016-05-30T00:00:00+02:00",
+                    "stop": "2016-07-06T00:00:00+02:00",
+                    "languages": [
+                      "en",
+                      "de"
+                    ]
+                  },
+                  "geometry": {
+                    "type": "GeometryCollection",
+                    "geometries": [
+                      {
+                        "type": "Point",
+                        "crs": {
+                          "type": "name",
+                          "properties": {
+                            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+                          }
+                        },
+                        "coordinates": [
+                          13.738038539886,
+                          51.066036676196
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+
+## Event [/events/{lang_code}/{event_shortname}]
+
++ Parameters
+    + lang_code - ISO lang code
+    + event_shortname - friendly name of the Event
+
+### View an Event Detail [GET]
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+              "id": "49f982fc-0098-91ae-e093-703eee8e3c94",
+              "type": "Feature",
+              "properties": {
+                "name": "EVENt with MULTI LANG",
+                "color": "#00C7D6",
+                "uri": "/events/de/event-with-multi-lang",
+                "cat_codes": [
+                  2048,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "interactions": [
+                  {
+                    "id": 1,
+                    "name": "Aktiv werden",
+                    "comment": ""
+                  }
+                ],
+                "subjects": [],
+                "address": {
+                  "street": "Eisenbahnstraße 1",
+                  "quarter": "Innere Neustadt",
+                  "district": "Neustadt",
+                  "city": "Dresden",
+                  "postcode": "01097",
+                  "countrycode": "de",
+                  "country": "Deutschland",
+                  "timezone": "Europe/Berlin"
+                },
+                "thumbnail": "",
+                "start": "2016-05-30T00:00:00+02:00",
+                "stop": "2016-07-06T00:00:00+02:00",
+                "languages": [
+                  {
+                    "code": "en",
+                    "name": "Englisch"
+                  },
+                  {
+                    "code": "de",
+                    "name": "Deutsch"
+                  }
+                ],
+                "abstract": "",
+                "description": "<p/>",
+                "images": [],
+                "contactRoles": [
+                  {
+                    "role": "Presse",
+                    "contact": {
+                      "firm": null,
+                      "organisation": null,
+                      "firstname": "Ralf",
+                      "surename": "",
+                      "function": null,
+                      "fon": "",
+                      "fax": null,
+                      "mobile": "",
+                      "email": "ralf@",
+                      "website": null,
+                      "availability": null,
+                      "address": {
+                        "street": "Conradstraße",
+                        "quarter": "Leipziger Vorstadt",
+                        "district": "Neustadt",
+                        "city": "Dresden",
+                        "postcode": "01097",
+                        "countrycode": "de",
+                        "country": "Deutschland",
+                        "timezone": ""
+                      }
+                    }
+                  }
+                ],
+                "registration": false,
+                "registrationDeadline": "",
+                "registrationComment": null,
+                "payment": {
+                  "id": 1,
+                  "name": "Kostenlos",
+                  "comment": ""
+                }
+              },
+              "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                  {
+                    "type": "Point",
+                    "crs": {
+                      "type": "name",
+                      "properties": {
+                        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+                      }
+                    },
+                    "coordinates": [
+                      13.738038539886,
+                      51.066036676196
+                    ]
+                  }
+                ]
+              }
+            }
+
+# Group Contacts
+
+## Contacts Collection [/contacts]
+
+### List All Contacts [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "1",
+                "title": "",
+                "surname": "",
+                "firstname": "",
+                "address": "",
+                "company": "",
+                "organisation": "",
+                "phone": "",
+                "mobilephone": "",
+                "fax": "",
+                "email": "",
+                "website": "",
+                "function": "",
+                "availability": "",
+                "usr": "",
+                "photo": "",
+                "facebook": "",
+                "twitter": "",
+                "linkedin": "",
+                "description": "",
+                "location": {
+                    "long": "",
+                    "lat": ""
+                },
+                "roles": [
+                    {
+                        "role": ""
+                    },
+                    {
+                        "role": ""
+                    }
+                ],
+                "languages": [
+                    {
+                        "language": "eng"
+                    },
+                    {
+                        "language": "ger"
+                    }
+                ],
+                "scipptrainer": true,
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "url": "/contacts/1",
+                "events": [
+                    {
+                        "name": "Event 1",
+                        "timeinterval": "",
+                        "url" : "/events/1"
+                    },
+                    {
+                        "name": "Event 2",
+                        "timeinterval": "",
+                        "url" : "/events/2"                        
+                    }
+                ],
+                "projects": [
+                    {
+                        "name": "Project 1",
+                        "openingtime": "",
+                        "url" : "/projects/1"                        
+                    },
+                    {
+                        "name": "Project 2",
+                        "openingtime": "",
+                        "url" : "/projects/2"                        
+                    }
+                ]
+            }
+        ]
+
+## Contact [/contacts/{contact_id}]
+
++ Parameters
+    + contact_id (number) - ID of the Contact in the form of an integer
+
+### View a Contact Detail [GET]
+
++ Response 200 (application/json)
+
+# Group Materials
+
+## Materials Collection [/materials]
+
+### List All Materials [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "1",
+                "title": "Material 1",
+                "created_at": "2015-08-05T08:40:51.620Z",
+                "updated_at": "2015-08-05T08:40:51.620Z",                
+                "url": "/materials/1",
+                "abstract": "",
+                "description": "",
+                "categories": [
+                    {
+                        "type": "tag",
+                        "name": "tag name"
+                    },
+                    {
+                        "type": "category",
+                        "name": "category name"
+                    }
+                ],
+                "contenttype": "",
+                "content": "",
+                "licence": "",
+                "languages": [
+                    {
+                        "language": "eng"
+                    },
+                    {
+                        "language": "ger"
+                    }
+                ],
+                "uploadedby": [
+                    {
+                        "firstname": "Contact 1",
+                        "surname": "Contact 1 surname",                        
+                        "scipptrainer": true,
+                        "url" : "/contacts/1"
+                    }              
+                ]
+            }
+        ]
+
+## Material [/materials/{material_id}]
+
++ Parameters
+    + material_id (number) - ID of the Material in the form of an integer
+
+### View a Material Detail [GET]
+
++ Response 200 (application/json)
+
+# Group Options
+
+All Options like Categories, Evolution States, Event Subjects have an uniform API.
+If the option is hierachial like Categories or Subjects  the parent-node can be given as parameter node=id.
+
+
+## Evolutions [/admin/evolutions?{translations}]
+
+### View All Evolutions [GET]
++ Parameters
+    + translations (boolean)
+
++ Response 200 (application/json)
+
+        [
+            {
+                "color": "",
+                "deleted": false,
+                "description": null,
+                "hidden": false,
+                "iconChar": null,
+                "id": 6,
+                "initialLangId": "de",
+                "locked": false,
+                "markerNode": false,
+                "name": "wee ida",
+                "ord": 6,
+                "parentNode": null,
+                "refCount": 0,
+                "selectable": true
+            }, {
+                "color": null,
+                "deleted": false,
+                "description": "",
+                "hidden": false,
+                "iconChar": null,
+                "id": 7,
+                "initialLangId": "de",
+                "locked": false,
+                "markerNode": false,
+                "name": "Umsetzung wird vorbereitet",
+                "ord": 7,
+                "parentNode": null,
+                "refCount": 0,
+                "selectable": true
+            }, {
+                "color": null,
+                "deleted": false,
+                "description": null,
+                "hidden": false,
+                "iconChar": null,
+                "id": 8,
+                "initialLangId": "de",
+                "locked": false,
+                "markerNode": false,
+                "name": "Aktiv",
+                "ord": 8,
+                "parentNode": null,
+                "refCount": 0,
+                "selectable": true
+            }, {
+                "color": null,
+                "deleted": false,
+                "description": null,
+                "hidden": false,
+                "iconChar": null,
+                "id": 9,
+                "initialLangId": "de",
+                "locked": false,
+                "markerNode": false,
+                "name": "Pause",
+                "ord": 9,
+                "parentNode": null,
+                "refCount": 0,
+                "selectable": true
+            }, {
+                "color": null,
+                "deleted": false,
+                "description": null,
+                "hidden": false,
+                "iconChar": null,
+                "id": 10,
+                "initialLangId": "de",
+                "locked": false,
+                "markerNode": false,
+                "name": "Beendet",
+                "ord": 10,
+                "parentNode": null,
+                "refCount": 0,
+                "selectable": true
+            }
+        ]    
+
+## Categories [/admin/categories]
+
+### View All Categories [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 6,
+                "ord": 6,
+                "name": "ecovillage",
+                "description": null,
+                "color": "#AAAAAA",
+                "deleted": false,
+                "hidden": false,
+                "iconChar": null,
+                "initialLangId": "de",
+                "locked": false,
+                "markerNode": false,
+                "parentNode": null,
+                "refCount": 0,
+                "selectable": true
+            }
+        ]
+
+## Subjects [/admin/subjects]
+
+### View All Subjects [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 6,
+                "ord": 6,
+                "name": "education",
+                "description": null,
+                "color": "#AAAAAA",
+                "deleted": false,
+                "hidden": false,
+                "iconChar": null,
+                "initialLangId": "de",
+                "locked": false,
+                "markerNode": false,
+                "parentNode": null,
+                "refCount": 0,
+                "selectable": true
+            }
+        ]
+
+## Interactions [/admin/interactions]
+
+### View All Interactions [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 6,
+                "ord": 6,
+                "name": "learning",
+                "description": null,
+                "color": "#AAAAAA",
+                "deleted": false,
+                "hidden": false,
+                "iconChar": null,
+                "initialLangId": "de",
+                "locked": false,
+                "markerNode": false,
+                "parentNode": null,
+                "refCount": 0,
+                "selectable": true
+            }
+        ]
